@@ -36,71 +36,66 @@ function isPalindrome(text) {
 
 
 //2ND SECTION START
-numbList = [];
-for (let i = 0; i < randomRange(0, 50); ++i) {
-    numbList.push(randomRange(0, 360))
-}
+numbList = [7, 1, 0, 6, 1, 4, 0, 3, 2, 4];
+// for (let i = 0; i < randomRange(0, 50); ++i) {
+//     numbList.push(randomRange(0, 360))
+// }
+
+// for (let i = 0; i < 10; ++i) {
+//     numbList.push(randomRange(0, 10))
+// }
+
+// console.log(numbList);
 
 dataValues[1].innerHTML = numbList;
-resultsContainer[1].innerHTML = mergeSort(numbList, 0, numbList.length - 1);
+resultsContainer[1].innerHTML = mergeSort(numbList, 0, numbList.length);
 
-function mergeSort(arr, leftPointer, rightPointer, direction = "asc") {
-    if (leftPointer < rightPointer) {
-        let midPoint = Math.round((rightPointer - leftPointer)/2);
-        mergeSort(arr, leftPointer, midPoint);
-        mergeSort(arr, midPoint + 1, rightPointer);
-
-        mergeArray(arr, leftPointer, midPoint, rightPointer, direction);
-    }
-    return;
-}
-
-function mergeArray(arr, leftPointer, midPoint, rightPointer, direction = "asc") {
-    let tempArray = []
+function mergeArray(arr, leftPointer, middlePoint, rightPointer) {
+    let tempArray = [];
     let leftCount = leftPointer;
-    let midCount = midPoint + 1;
-    let totalCount = 0;
+    let midCount = middlePoint + 1;
+    let indexCount = leftPointer;
 
-    while (leftCount <= midPoint && midCount < rightPointer) {
-
-        if (direction = "asc") {
-            if (arr[leftCount] > arr[midCount]) {
-                tempArray.push(arr[midCount]);
-                ++midCount;
-                ++totalCount;
-            } else {
-                tempArray.push(arr[leftCount]);
-                ++leftCount;
-                ++totalCount;
-            }
-        } else if (direction = "des") {
-            if (arr[leftCount] < arr[midCount]) {
-                tempArray.push(arr[midCount]);
-                ++midCount;
-                ++totalCount;
-            } else {
-                tempArray.push(arr[leftCount]);
-                ++leftCount;
-                ++totalCount;
-            }
+    while (leftCount <= middlePoint && midCount <= rightPointer) {
+        if (arr[leftCount] > arr[midCount]) {
+            tempArray[indexCount] = arr[midCount];
+            ++midCount;
+            ++indexCount;
+        } else {
+            tempArray[indexCount] = arr[leftCount];
+            ++leftCount;
+            ++indexCount;
         }
     }
 
-    while (leftCount <= midPoint) {
-        tempArray.push(arr[leftCount]);
+    while (leftCount <= middlePoint) {
+        tempArray[indexCount] = arr[leftCount];
         ++leftCount;
-        ++totalCount;
+        ++indexCount;
     }
 
     while (midCount <= rightPointer) {
-        tempArray.push(arr[midCount]);
+        tempArray[indexCount] = arr[midCount];
         ++midCount;
-        ++totalCount;
+        ++indexCount;
     }
 
-    for (let i = 0; i < totalCount; ++i) {
+    for (let i = leftPointer; i < indexCount; i++) {
         arr[i] = tempArray[i];
     }
+}
+
+function mergeSort(arr, leftPointer, rightPointer) {
+    if (leftPointer < rightPointer) {
+        let middlePoint = Math.round((leftPointer + rightPointer)/2);
+
+        mergeSort(arr, leftPointer, middlePoint);
+        mergeSort(arr, middlePoint + 1, rightPointer);
+
+        mergeArray(arr, leftPointer, middlePoint, rightPointer);
+    }
+
+    return;
 }
 //2ND SECTION END
 
