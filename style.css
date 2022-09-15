@@ -52,8 +52,9 @@ body {
     padding: 24px;
     color: white;
     margin: auto;
-    max-width: 800px;
+    max-width: 400px;
     min-width: 320px;
+    word-wrap: break-word;
     /* width: 320px; */
     min-height: 240px;
     display: flex;
