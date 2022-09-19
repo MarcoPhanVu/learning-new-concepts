@@ -28,6 +28,7 @@ function mergeArray(arr, leftPointer, middlePoint, rightPointer) {
         ++indexCount;
 	}
 
+
 	for (let i = leftPointer; i < indexCount; i++) {
 		arr[i] = tempArray[i];
 	}
