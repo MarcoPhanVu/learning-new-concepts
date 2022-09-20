@@ -37,15 +37,11 @@ function isPalindrome(text) {
 
 
 //2ND SECTION START
-// numbList = [7, 1, 0, 6, 4, 0, 3, 2, 4];
-var numbList = [7, 1, 0, 6, 4];
+numbList = [7, 1, 0, 6, 4, 0, 3, 2, 4];
 // for (let i = 0; i < randomRange(0, 50); ++i) {
 //     numbList.push(randomRange(0, 360))
 // }
 
-// for (let i = 0; i < 10; ++i) {
-//     numbList.push(randomRange(0, 10))
-// }
 
 dataValues[1].innerHTML = numbList;
 
@@ -64,12 +60,6 @@ function mergeArray(arr, leftPointer, middlePoint, rightPointer) {
     let midCount = middlePoint + 1;
     let indexCount = leftPointer;
 
-    // console.log("leftCount = " + leftCount);
-    // console.log("middlePointer= " + middlePoint);
-    // console.log("midCount= " + midCount);
-    // console.log("right= " + rightPointer);
-
-
     while (leftCount <= middlePoint && midCount <= rightPointer) {
         console.log("Shit went here")
         if (arr[leftCount] > arr[midCount]) {
@@ -79,27 +69,17 @@ function mergeArray(arr, leftPointer, middlePoint, rightPointer) {
         }
     }
 
-    if(indexCount > arr.length) { //Prevent creating fake elements
-        indexCount = arr.length;
-    }
-
-    console.log("This is 1st tempArr generated: " + tempArray);
     while (leftCount <= middlePoint) {
         tempArray[indexCount++] = arr[leftCount++];
     }
-
-    console.log("MidCount before loop: " + midCount);
-    console.log("indexCount before loop: " + indexCount);
 
     while (midCount <= rightPointer) {
         tempArray[indexCount++] = arr[midCount++];
     }
 
-    console.log("MidCount after loop: " + midCount);
-    console.log("indexCount after loop: " + indexCount);
-
-    console.log("This is 2nd tempArr generated: " + tempArray);
-
+    if(indexCount > arr.length) { //Prevent creating fake elements
+        indexCount = arr.length;
+    }
 
     for (let i = leftPointer; i < indexCount; ++i) {
         arr[i] = tempArray[i];
