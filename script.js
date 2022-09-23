@@ -37,16 +37,31 @@ function isPalindrome(text) {
 
 
 //2ND SECTION START
-numbList = [7, 1, 0, 6, 4, 0, 3, 2, 4];
-// for (let i = 0; i < randomRange(0, 50); ++i) {
-//     numbList.push(randomRange(0, 360))
-// }
+numbList = [];
 
+let range = randomRange(4, 16);
+let pickedNum = 0;
 
-dataValues[1].innerHTML = numbList;
+for (let i = 0; i < range; ++i) { //for better looking result
+    pickedNum = randomRange(0, 50);
+    numbList.push(pickedNum);
+    if (i != range - 1) {
+        dataValues[1].innerHTML += pickedNum + ", ";
+    } else {
+        dataValues[1].innerHTML += pickedNum;
+    }
+}
+
 
 mergeSort(numbList, 0, numbList.length);
-resultsContainer[1].innerHTML = numbList;
+
+for (let i = 0; i < numbList.length; ++i) { //for better looking result
+    if (i != numbList.length - 1) {
+        resultsContainer[1].innerHTML += numbList[i] + ", ";
+    } else {
+        resultsContainer[1].innerHTML += numbList[i];
+    }
+}
 
 function mergeArray(arr, leftPointer, middlePoint, rightPointer) {
     let tempArray = [];
