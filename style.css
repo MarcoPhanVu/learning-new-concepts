@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
+
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -7,34 +11,55 @@
     font-family: 'Nunito';
 }
 
+
+
+
 html {
     scroll-behavior: smooth;
     /* scroll-padding-top: 120px; */
 }
 
+
+
 :root {
-    --color1: #E7A657;
+    /* --color1: #E7A657;
     --color2: #DC9B4D;
     --color3: #91582E;
-    --color4: #553418;
-
-    --idk1: rgb(252, 232, 167);
-
-    --memList-color: rgb(255, 233, 206);
-
-    --mainBG-color: rgb(255, 250, 241);
+    --color4: #553418; */
 }
+
 
 body {
     padding: 36px;
 }
 
+.hidden {
+    display: none !important;
+}
+
 .main-container {    
     background-color: rgb(243, 246, 255);
     padding: 36px;
+}
+
+.subject {
+    padding: 12px 0px;
+    width: 300px;
+    margin: 36px auto;
+    /* background-color: rgb(250, 157, 114); */
+}
+
+.large-container {
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
-    column-gap: 36px;
+    column-gap: 16px;
+    /* background-color: rgb(23, 31, 59); */
+    margin-bottom: 48px;
+}
+
+.subject {
+    text-align: center;
 }
 
 .panel {
@@ -62,6 +87,14 @@ body {
     flex-direction: column;
 }
 
+.sub-container:hover {
+    transition: 100ms ease-in-out;
+    animation: bounce 1s;
+    background-color: #a2d2ff;
+    color: #0a1e31;
+
+}
+
 .sub-container > * {
     margin: 12px 0;
     /* background-color: slategrey; */
@@ -71,4 +104,40 @@ body {
     margin: 24px 0;
     line-height: 32px;
     background-color: rgb(170, 141, 248);
+} */
+
+
+
+
+
+/* EXCESS */
+/* 
+@-webkit-keyframes bounce {
+    0% {
+        top: 0;
+        animation-timing-function: ease-out;
+    }
+    17% {
+        top: 15px;
+        animation-timing-function: ease-in;
+    }
+    34% {
+        top: 0;
+        animation-timing-function: ease-out;
+    }
+    51% {
+        top: 8px;
+        animation-timing-function: ease-in;
+    }
+    68% {
+        top: 0px;
+        animation-timing-function: ease-out;
+    }
+    85% {
+        top: 3px;
+        animation-timing-function: ease-in;
+    }
+    100% {
+        top: 0;
+    }
 } */

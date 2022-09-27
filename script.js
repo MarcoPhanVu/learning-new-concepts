@@ -1,4 +1,5 @@
 const dataValues = document.querySelectorAll(".value")
+// const dataValues = document.querySelectorAll("[recursion-data-value]")
 const resultsContainer = document.querySelectorAll(".result")
 
 
@@ -47,11 +48,7 @@ for (let i = 0; i < range; ++i) { //for better looking result
     else dataValues[1].innerHTML += pickedNum;
 }
 
-
-
 mergeSort(numbList, 0, numbList.length);
-
-
 
 for (let i = 0; i < numbList.length; ++i) { //for better looking result
     if (i != numbList.length - 1) resultsContainer[1].innerHTML += numbList[i] + ", ";
@@ -76,7 +73,7 @@ function mergeArray(arr, leftPointer, middlePoint, rightPointer) {
 
     while (midCount <= rightPointer) tempArray[indexCount++] = arr[midCount++];
 
-    if(indexCount > arr.length) indexCount = arr.length; //Prevent creating fake elements
+    if (indexCount > arr.length) indexCount = arr.length; //Prevent creating fake elements
 
     for (let i = leftPointer; i < indexCount; ++i) arr[i] = tempArray[i];
 }
@@ -105,3 +102,5 @@ function mergeSort(arr, leftPointer, rightPointer) {
 //     result.innerHTML = "received";
 // })
 
+// template0 = (min, max) => Math.floor(Math.random()*(max-min)) + min;
+// template1 = () => console.log("onsolec.gol");
