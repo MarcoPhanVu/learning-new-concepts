@@ -1,5 +1,4 @@
 const dataValues = document.querySelectorAll(".value")
-// const dataValues = document.querySelectorAll("[recursion-data-value]")
 const resultsContainer = document.querySelectorAll(".result")
 
 

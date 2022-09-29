@@ -1,3 +1,5 @@
+// const recursionDataValues = document.querySelectorAll("[recursion-data-value]")
+
 //LEFT PANEL START
     //1ST Pane START
     const textList = ["deified", "nothing", "absent", "civic", "radar", "amusing", "level", "rotor", "scorching", "dogeeseseegod", "racecar", "ngannga"];
