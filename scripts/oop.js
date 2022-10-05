@@ -23,7 +23,7 @@ function Fighter(name, faction = "Hierarculus") { // Convention: Object and Clas
     
     // console.log("I'm " + this.name + " and I'm a Fighter.")
     
-    this.introduceSelf = function () {
+    introduceSelf = function () {
         console.log("My name is " + this.name);
         console.log("My speed is " + this.speed);
     }
@@ -68,13 +68,23 @@ function Panzerstecher(name, faction, weapon = "Piercer") {
 
 const Mark = new Panzerstecher("Mark", "Tryrosaurus", "Rapier")
 const Kimusk = new Panzerstecher("Kimusk", "Inuk", "Panzerfaust")
-console.log(Mark);
+// console.log(Mark);
 
-console.log("Mark tool = " + Mark.weapon);
-console.log("Kimusk tool = " + Kimusk.weapon);
+// console.log("Mark tool = " + Mark.weapon);
+// console.log("Kimusk tool = " + Kimusk.weapon);
 
 
 // Rapier, Estoc, 
 
 // Clara.increaseSpeed(12);
 // console.log("Clara's speed = " + Clara.speed);
+
+
+const tanker = {
+    introduceSelf: function () {
+        return `${this.name} is a ${this.faction}`;
+    }
+}
+
+const name = "Minh";
+
