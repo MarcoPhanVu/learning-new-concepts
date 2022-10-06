@@ -87,4 +87,3 @@ const tanker = {
 }
 
 const name = "Minh";
-
