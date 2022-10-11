@@ -24,11 +24,11 @@
         //2ND Pane START
     numbList = [];
     
-    let range = randomRange(4, 16);
+    let range = randomRange(4, 12);
     let pickedNum = 0;
     
     for (let i = 0; i < range; ++i) { //for better looking result
-        pickedNum = randomRange(0, 50);
+        pickedNum = randomRange(0, 30);
         numbList.push(pickedNum);
     
         if (i != range - 1) dataValues[1].innerHTML += pickedNum + ", ";
@@ -81,4 +81,32 @@
     }
     
     //2ND Pane END
-    //LEFT PANEL END
+//LEFT PANEL END
+
+
+//RIGHT PANEL START
+    //1ST Pane START
+    // The Ha Noi Tower Problem
+
+    // Normal version
+        function HaNoiTower(amount, from, to) {
+            if (amount == 1) {
+                printMove(from, to);
+                return;
+            }
+
+            let theOtherCollumn = 6 - from - to; //The collumns are labeled from 1-3 -> the sum'll be 6. Therefor, to find the last column, get the remainder of 6 - the other 2
+
+            //This is to find the available column
+
+            HaNoiTower(amount - 1, from, theOtherCollumn);
+            printMove(from, to);
+            HaNoiTower(amount - 1, theOtherCollumn, to);
+
+        }
+
+        function printMove(from, to) {
+            console.log(`Disc go from collumn ${from} to collumn ${to}`);
+        }
+
+        HaNoiTower(4, 1, 3);
