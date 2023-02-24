@@ -2,11 +2,14 @@
 
 //LEFT PANEL START
     //1ST Pane START
-    const textList = ["deified", "nothing", "absent", "civic", "radar", "amusing", "level", "rotor", "scorching", "dogeeseseegod", "racecar", "ngannga"];
+    const textList = ["deified", "nothing", "absent", "civic", "radar", "amusing", "level", "rotor", "scorching", "do geese see god", "race car", "ngan nga", "UwU", "OwO", "refer", "titan nation"];
 
     let chosenTextPalindrome = textList[randomRange(0, textList.length)];
+
     dataValues[0].innerHTML = `The chosen text is "${chosenTextPalindrome}"`;//Note for template literal: USE `
     
+    chosenTextPalindrome.split(" ").join(""); //Remove all whitespace
+
     let checkPalindrome = text => isPalindrome(text) ? `"${text}" is a Palindrome.` : `"${text}" is NOT a Palindrome.`;
     
     resultsContainer[0].innerHTML = checkPalindrome(chosenTextPalindrome);
@@ -21,7 +24,7 @@
     //1ST Pane END
     
     
-        //2ND Pane START
+    //2ND Pane START
     numbList = [];
     
     let range = randomRange(4, 12);
@@ -87,9 +90,10 @@
 //RIGHT PANEL START
     //1ST Pane START
     // The Ha Noi Tower Problem
-
+    const moveList = document.querySelector(".the-Ha-Noi-tower-problem");
     // Normal version
         function HaNoiTower(amount, from, to) {
+
             if (amount == 1) {
                 printMove(from, to);
                 return;
@@ -99,9 +103,16 @@
 
             //This is to find the available column
 
-            HaNoiTower(amount - 1, from, theOtherCollumn);
+            HaNoiTower(amount - 1, from, theOtherCollumn); //Move the smaller disc to the desire pole
+
+            let moveDescription = document.createElement("li");
+            // moveDescription.className = "the-Ha-Noi-tower-move";
+            // moveDescription.innerHTML = `Disc go from collumn ${from} to collumn ${to}`;
+            // moveList.appendChild(moveDescription);
+
             printMove(from, to);
-            HaNoiTower(amount - 1, theOtherCollumn, to);
+
+            HaNoiTower(amount - 1, theOtherCollumn, to); // move larger disc to the other pole
 
         }
 
@@ -109,4 +120,4 @@
             console.log(`Disc go from collumn ${from} to collumn ${to}`);
         }
 
-        HaNoiTower(4, 1, 3);
+        HaNoiTower(3, 1, 3);

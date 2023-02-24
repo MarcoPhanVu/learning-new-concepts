@@ -107,7 +107,19 @@ body {
     background-color: rgb(170, 141, 248);
 } */
 
+.the-Ha-Noi-tower-problem {
+    list-style-type: none;
+}
 
+.the-Ha-Noi-tower-title {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.the-Ha-Noi-tower-move {
+    
+    font-size: 12px;
+}
 
 
 

@@ -28,13 +28,13 @@ class Rectangle {
 const shape0 = new Rectangle(40, 6, "Green");
 const shape1 = new Rectangle(4, 55)
 
-shape0.greeting();
-shape0.talkshit();
+// shape0.greeting();
+// shape0.talkshit();
 shape0.area;
 
 Rectangle.swapWidth(shape0, shape1);
-console.log(shape0);
-console.log(shape1);
+// console.log(shape0);
+// console.log(shape1);
 
 
 
@@ -56,17 +56,17 @@ class SquaredTriple extends Triple {
     }
 }
 
-console.log(Triple.description);            // 'I triple any number you provide'
-console.log(Triple.calculate());            // 3
-console.log(Triple.calculate(6));           // 18
+// console.log(Triple.description);            // 'I triple any number you provide'
+// console.log(Triple.calculate());            // 3
+// console.log(Triple.calculate(6));           // 18
 
 const tp = new Triple();
 
-console.log(SquaredTriple.calculate(3));    // 81 (not affected by parent's instantiation)
-console.log(SquaredTriple.description);     // 'I square the triple of any number you provide'
-console.log(SquaredTriple.longDescription); // undefined
-console.log(SquaredTriple.customName);      // 'Tripler'
+// console.log(SquaredTriple.calculate(3));    // 81 (not affected by parent's instantiation)
+// console.log(SquaredTriple.description);     // 'I square the triple of any number you provide'
+// console.log(SquaredTriple.longDescription); // undefined
+// console.log(SquaredTriple.customName);      // 'Tripler'
 
 // This throws because calculate() is a static member, not an instance member.
-console.log(tp.calculate());                // 'tp.calculate is not a function'
+// console.log(tp.calculate());                // 'tp.calculate is not a function'
 
