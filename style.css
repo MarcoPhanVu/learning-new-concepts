@@ -73,6 +73,24 @@ body {
     /* justify-content: center; */
 }
 
+.panel-single {
+    background-color: rgb(255, 235, 235);
+    flex: 1;
+    padding: 24px;
+    display: flex;
+    row-gap: 24px;
+    flex-direction: column;
+}
+
+.input-section {
+    width: 300px;
+}
+
+.input-ele {
+    display: flex;
+    justify-content: space-between;
+}
+
 .sub-container {
     background-color: rgb(21, 51, 80);
     padding: 24px;
