@@ -23,7 +23,8 @@ allSubContainer.forEach( (panel, index) => {
     //JS doesn't support appending properties into Object so we use Object.assign into a tempObj and reassign it to the original Object instead
 
     //Just for clarity
-    // allSubContainer[index].style.height = compSubContStyle[index]["comptedHei"] + "px";
+    allSubContainer[index].style.height = compSubContStyle[index]["comptedHei"] + "px";
+    
     // console.log(`${index}: ${allSubContainer[index]["comptedHei"]}`);
     // console.log(`${index}: ${allSubContainer[index]}`);
     // console.log(`subContainerHei at ${index}: ${compSubContStyle[index]["comptedHei"]}`);
@@ -31,22 +32,40 @@ allSubContainer.forEach( (panel, index) => {
 });
 
 function keepEqual() {
-    for (let i = 0; i < allSubContainer.length / 2; i++) {
-        if(compSubContStyle[i]["comptedHei"] > compSubContStyle[i + 2]["comptedHei"]) {
+    for (let j = 0; j < allPanel.length / 2; j++) {
+        let extraIncrement = j * 4;
+        
+        for (let i = 0; i < allPanel.length / 2; i++) {
+            if (compSubContStyle[i + extraIncrement]["comptedHei"] > compSubContStyle[i + 2 + extraIncrement]["comptedHei"]) {
 
-            allSubContainer[i + 2].style.height = compSubContStyle[i]["comptedHei"] + "px";
+                console.log(`[${i + extraIncrement}] left larger`);
+                console.log(`[${i + extraIncrement}] was ${compSubContStyle[i + extraIncrement]["comptedHei"]}`);
 
-            // console.log("subCont at: ", i, " ", typeof(allSubContainer[i]));
-            // console.log("subCont at: ", i + 2, " ", allSubContainer[i + 2]);
+                allSubContainer[i + 2 + extraIncrement].style.height = compSubContStyle[i + extraIncrement]["comptedHei"] + "px";
 
-        } else {
-            // console.log("reacheryarcy");
-            console.log(`${i} feels like she wanted to change`);
-            console.log(`${i} was ${compSubContStyle[i]["comptedHei"]}`);
-            console.log(`And ${i + 2} was ${compSubContStyle[i + 2]["comptedHei"]}`);
-            allSubContainer[i].style.height = compSubContStyle[i + 2]["comptedHei"] + "px";
+                console.log(`And [${i + 2 + extraIncrement}] was ${compSubContStyle[i + 2 + extraIncrement]["comptedHei"]}`);
+                console.log(`Now [${i + 2 + extraIncrement}] is ${allSubContainer[i + 2 + extraIncrement].style.height}`);
+                
+                console.log("");
+                console.log("");
+            }
+            
+            else {
+                // console.log("reacheryarcy");
+                console.log(`[${i + extraIncrement}] left Smaller`);
+                console.log(`[${i + extraIncrement}] was ${compSubContStyle[i + extraIncrement]["comptedHei"]}`);
+                
+                console.log(`And [${i + 2 + extraIncrement}] was ${compSubContStyle[i + 2 + extraIncrement]["comptedHei"]}`);
+
+                allSubContainer[i + extraIncrement].style.height = compSubContStyle[i + 2 + extraIncrement]["comptedHei"] + "px";
+                console.log(`Now [${i + extraIncrement}] is ${allSubContainer[i + extraIncrement].style.height}`);
+
+                console.log("");
+                console.log("");
+            }
         }
     }
+
 }
 
 keepEqual();
