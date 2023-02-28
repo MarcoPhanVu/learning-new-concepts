@@ -12,10 +12,3 @@ function swap(a, b) {
     return;
 }
 
-// This shit worked
-// allSmallContainer.forEach(result => {
-//     result.innerHTML = "received";
-// })
-
-// template0 = (min, max) => Math.floor(Math.random()*(max-min)) + min;
-// template1 = () => console.log("onsolec.gol");
