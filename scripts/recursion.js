@@ -5,10 +5,11 @@
     const textList = ["deified", "nothing", "absent", "civic", "radar", "amusing", "level", "rotor", "scorching", "do geese see god", "race car", "ngan nga", "UwU", "OwO", "refer", "titan nation"];
 
     let chosenTextPalindrome = textList[randomRange(0, textList.length)];
+    // let chosenTextPalindrome = textList[textList.length - 1];
 
     dataValues[0].innerHTML = `The chosen text is "${chosenTextPalindrome}"`;//Note for template literal: USE `
-    
-    chosenTextPalindrome.split(" ").join(""); //Remove all whitespace
+
+    chosenTextPalindrome = chosenTextPalindrome.split(" ").join(""); //Remove all whitespace
 
     let checkPalindrome = text => isPalindrome(text) ? `"${text}" is a Palindrome.` : `"${text}" is NOT a Palindrome.`;
     
@@ -120,4 +121,4 @@
             console.log(`Disc go from collumn ${from} to collumn ${to}`);
         }
 
-        HaNoiTower(3, 1, 3);
+        // HaNoiTower(3, 1, 3);
