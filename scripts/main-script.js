@@ -1,3 +1,5 @@
+// const body = document.querySelector("body");
+
 const dataValues = document.querySelectorAll(".value")
 const resultsContainer = document.querySelectorAll(".result")
 
