@@ -115,8 +115,11 @@ body {
 }
 
 .sub-container > * {
-    margin: 12px 0;
-    /* background-color: slategrey; */
+    margin: 8px 0;
+}
+
+.sub-container > p {
+    line-height: 20px;
 }
 
 /* .sub-container:nth-child(2n) {
