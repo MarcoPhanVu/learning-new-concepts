@@ -30,7 +30,7 @@ allSubContainer.forEach( (panel, index) => {
     // allSubContainer[index].style.width = compSubContStyle[index]["comptedWid"] + "px";
 });
 
-console.log(allPanel);
+// console.log(allPanel);
 
 function keepEqual() {
     for (let j = 0; j < allPanel.length / 2; j++) {
