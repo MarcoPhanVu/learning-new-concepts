@@ -52,29 +52,18 @@ function keepEqual() {
         // THIS IS FOR THE WIDTH OF THE SUB-CONTAINERS ON THE SAME COLUMN
         for (let i = 0; i < allPanel.length; i += 2) {
             if (compSubContStyle[i + extraIncrement]["comptedWid"] > compSubContStyle[i + 1 + extraIncrement]["comptedWid"]) {
-                console.log("upper larger");
-                console.log(`Original Width of [${i + extraIncrement}]: ${compSubContStyle[i + extraIncrement]["comptedWid"]}`);
-                console.log(`Original Width of [${i + 1 + extraIncrement}]: ${compSubContStyle[i + extraIncrement]["comptedWid"]}`);
-
                 allSubContainer[i + 1 + extraIncrement].style.width = compSubContStyle[i + extraIncrement]["comptedWid"] + "px";
-                console.log(`New Width of [${i + 1 + extraIncrement}]: ${compSubContStyle[i + extraIncrement]["comptedWid"]}`);
-
             }
             
             else {
-                console.log("lower larger");
-
-                console.log(`Original Width of [${i + extraIncrement}]: ${compSubContStyle[i + extraIncrement]["comptedWid"]}`);
-                console.log(`Original Width of [${i + 1 + extraIncrement}]: ${compSubContStyle[i + extraIncrement]["comptedWid"]}`);
                 allSubContainer[i + extraIncrement].style.width = compSubContStyle[i + 1 + extraIncrement]["comptedWid"] + "px";
-                console.log(`New Width of [${i + extraIncrement}]: ${compSubContStyle[i + extraIncrement]["comptedWid"]}`);
-
             }
-            console.log("");
-            console.log("");
-            console.log("");
         }
     }
 }
 
-keepEqual();
+keepEqual(); //Execute this function once because most of the time, the user won't resize the window
+
+window.addEventListener("resize", () => {
+    keepEqual();
+})
