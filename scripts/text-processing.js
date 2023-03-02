@@ -12,6 +12,7 @@ console.log(toi);
 
 extractableTextBox.addEventListener('keydown', (event) => {
     toi = event.target.value;
+    extractMainInfo(toi);
 
     // if (event.key == "Enter") {
     //     console.log(event.target.value);
@@ -20,11 +21,20 @@ extractableTextBox.addEventListener('keydown', (event) => {
 });
 
 function extractMainInfo(request) {
-    console.log(`App = `, request[0]);
-    console.log(`Brand = `, request[1]);
-    console.log(`Opcode = `, request[request.length - 3]);
-    console.log(`Currency = `, request[request.length - 2]);
-    console.log(`Amount = `, request[request.length - 1]);
+    let brand = request[1];
+    let opcode = request[request.length - 3];
+    let currency = request[request.length - 2];
+    let amount = request[request.length - 1];
+
+    brand = brand.split('-')[2].split('{A}')[0];
+    opcode = opcode.split(' ')[1];
+    currency = currency.split(' ')[1];
+    amount = amount.split(' ')[1];
+
+    console.log(`Brand =`, brand);
+    console.log(`Opcode =`, opcode);
+    console.log(`Currency =`, currency);
+    console.log(`Amount =`, amount);
 }
 
 extractMainInfo(toi);
