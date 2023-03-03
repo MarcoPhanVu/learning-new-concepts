@@ -28,27 +28,29 @@ const API_Manage = {
 
 }
 
-class API_Manager {
-    constructor(name, brandname, currency, order, opcode, email, secretkey) {
+class API_Set {
+    constructor(opcode, name, brandname, currency, order) {
+        this.opcode = opcode;
         this.name = name;
         this.brandname = brandname;
         this.currency = currency;
-        this.order = order;
-        this.opcode = opcode;
-        this.email = email;
-        this.secretkey = secretkey;
+        // this.order = order;
+        // this.email = email;
+        // this.secretkey = secretkey;
     }
 
     toppedUp = {};
 
-    // Getter
-    get brandName() { return this.brandname; }
-    get order() { return this.order; }
-    get opcode() { return this.opcode; }
     get toppedUpProducts() {
         return this.toppedUp;
     }
 
     // Methods
+    
+}
+
+const v12v = new API_Set("v12v", "Vivian", "VIVIAN127", "VND")
+
+const API_Manager = {
 
 }

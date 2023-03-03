@@ -4,14 +4,17 @@ const extractableTextBox = document.getElementById('text-processing');
 //Usese keydown if require some key to start processing because input event doesn't handle funtion keys like "Enter"
 
 
-extractableTextBox.value = 'Application: Top Up Product Credit \nTelegram Group: GS-API-VIVIAN127{A} \nProduct: \n\n3SING : bch\nBbin : L82\nBTI : avivian127vnd\nCMD : VV1VNadmin\nIBC : D86\nSBO : GSG87\nUG Sport(TBS) : VIVIAN127VND\nWBET : VIVIAN127\nAsia Gaming : avivian127vnd\nBig Gaming : VIVIAN127VN\nBbin : L82\nDream Gaming : DG011601CM\nEvolution Gaming : VIVIAN12VN\nHo Gaming : avivian127vnd\nMG Plus : VIVIAN127VN\nN2 Live : avivian127vnd\nPragmatic Play : VIVIAN127VNcs@gmail.com\nPlaytech : PZVIVIAN127VNDVNDadmin\nAWC Sexy Baccarat : vivian127vn\nVivo Gaming : VIVIAN127VN_P\nWM Casino : vv127vndapi\nApollo : gamingsoft-vivian127vnd\nCQ9 : VIVIAN127VND\nDragoon Soft : VIVIAN127VND\nLGD Gaming / Dream Tech : vivian127vnd_admin\nFunky : VIVIAN127VND\nFlowgaming : VIVIAN127_VND_USER\nJDB : Qwer1234\nLive22 : VIVIAN127VND\nMG Plus : VIVIAN127VN\nYL Gaming : yltchgfv\nIA Esport : VIVIAN127VN\nAvia Gaming : vivianvn_admin\nTF Gaming : vivian127vndo01\nGamingsoft Gameplay : M16\nQQ Keno : VN127VNADMIN\n93Connect : VIVIAN127VND\nBig Gaming : VIVIAN127VN\nAsia Gaming : avivian127vnd\nJili : GamingSoft_VIVIAN127VND_VND\nSpade Gaming : VVN12VNADMIN\nYaxinCQ9 : VIV127VN\nDigmaan : VC60PV36\nAWC RCB998 : vivian127vnd\nBole  Gaming : VIVIAN127VND@admin.com\nFun Gaming : VIVIAN127VN\nICG : VIVIAN127VND\nJili : GamingSoft_VIVIAN127VND_VND\nV8 Poker : V12VVND\nLeGaming : VV127VND\n\nOpcode: v12v\nCurrency: VND \nAmount: 1,000,000,000 (1B)';
+extractableTextBox.value = 'Application: Top Up Product Credit \nTelegram Group: GS-API-VIVIAN127{A} \nProduct: \n\nBbin : L82\nBTI : avivian127vnd\nCMD : VV1VNadmin\nIBC : D86\nSBO : GSG87\nUG Sport(TBS) : VIVIAN127VND\nWBET : VIVIAN127\nAsia Gaming : avivian127vnd\nBig Gaming : VIVIAN127VN\n\nOpcode: v12v\nCurrency: VND \nAmount: 1,000,000,000 (1B)';
 
 let toi = extractableTextBox.value.split('\n');
 
 console.log(toi);
 
-extractableTextBox.addEventListener('keydown', (event) => {
-    toi = event.target.value;
+// Change back to "input" because "keydown" only update the value after function have been executed
+extractableTextBox.addEventListener('input', (event) => {
+    toi = extractableTextBox.value.split('\n');
+    console.log(extractableTextBox.value);
+    console.log(toi);
     extractMainInfo(toi);
 
     // if (event.key == "Enter") {
@@ -20,24 +23,50 @@ extractableTextBox.addEventListener('keydown', (event) => {
     // }
 });
 
+
+extractMainInfo(toi);
+
+
 function extractMainInfo(request) {
-    let brand = request[1];
     let opcode = request[request.length - 3];
+    let brand = request[1];
     let currency = request[request.length - 2];
     let amount = request[request.length - 1];
 
-    brand = brand.split('-')[2].split('{A}')[0];
     opcode = opcode.split(' ')[1];
+    brand = brand.split('-')[2].split('{A}')[0];
     currency = currency.split(' ')[1];
     amount = amount.split(' ')[1];
+
+    let name = brand.split('/^\d/')[0];
+    console.log(`Name =`, name);
+
+    for (let i = 4; i < request.length - 5; i++) {
+        let temp = new API_Set(opcode)
+    }
+    let firstProd = request[4];
+    let lastProd = request[request.length - 5];
 
     console.log(`Brand =`, brand);
     console.log(`Opcode =`, opcode);
     console.log(`Currency =`, currency);
     console.log(`Amount =`, amount);
+    console.log(`firstProd =`, firstProd);
+    console.log(`lastProd =`, lastProd);
 }
 
-extractMainInfo(toi);
+console.log(v12v);
+
+
+
+
+
+
+
+
+
+
+
 
 // temp
 /*
