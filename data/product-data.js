@@ -1,56 +1,43 @@
-const API_Manage = {
-    API_List: {
-        Alice: {
-            brandName: "alice68",
-            currency: "vnd",
-            order: 9,
-            email: "",
-            opcode: "a68v",
-            key: "",
-        },
-        Vivian: {
-            brandName: "vivian127",
-            currency: "vnd",
-            order: 18,
-            email: "",
-            opcode: "v12v",
-            key: "",
-        },
-        Argentum: {
-            brandName: "argentum108",
-            currency: "vnd",
-            order: 27,
-            email: "",
-            opcode: "argv",
-            key: "",
-        }
-    }
-
-}
-
 class API_Set {
-    constructor(opcode, name, brandname, currency, order) {
+    constructor(opcode, name, brandname, currency) {
         this.opcode = opcode;
         this.name = name;
         this.brandname = brandname;
         this.currency = currency;
         // this.order = order;
-        // this.email = email;
-        // this.secretkey = secretkey;
     }
 
-    toppedUp = {};
+    toppedUp = {
+
+    };
 
     get toppedUpProducts() {
         return this.toppedUp;
     }
 
     // Methods
-    
+
 }
 
 const v12v = new API_Set("v12v", "Vivian", "VIVIAN127", "VND")
+v12v.toppedUp = {
+    "Bbin": "L82",
+    "BTI": "avivian127vnd",     
+    "CMD": "VV1VNadmin",
+    "IBC": "D86",
+    "SBO": "GSG87",
+    "UG Sport(TBS)": "VIVIAN127VND",
+    "WBET": "VIVIAN127",
+    "Asia Gaming": "avivian127vnd",
+    "Big Gaming": "VIVIAN127VN"
+}
 
 const API_Manager = {
-
+    VND: [],
+    USD: [],
+    USDT: [],
+    Combined: []
 }
+
+document.write("a", JSON.stringify(v12v));
+console.log("a", JSON.stringify(v12v));
