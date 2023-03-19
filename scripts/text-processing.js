@@ -1,19 +1,19 @@
 const extractableTextBox = document.getElementById('text-processing');
 
-
-//Usese keydown if require some key to start processing because input event doesn't handle funtion keys like "Enter"
-
-
 extractableTextBox.value = 'Application: Top Up Product Credit \nTelegram Group: GS-API-VIVIAN127{A} \nProduct: \n\nBbin : L82\nBTI : avivian127vnd\nCMD : VV1VNadmin\nIBC : D86\nSBO : GSG87\nUG Sport(TBS) : VIVIAN127VND\nWBET : VIVIAN127\nAsia Gaming : avivian127vnd\nBig Gaming : VIVIAN127VN\n\nOpcode: v12v\nCurrency: VND \nAmount: 1,000,000,000 (1B)';
 
 let toi = extractableTextBox.value.split('\n');
 
-console.log(toi);
+// console.log(toi);
+
+//Usese keydown if require some key to start processing because input event doesn't handle funtion keys like "Enter"
 
 // Change back to "input" because "keydown" only update the value after function have been executed
+
+// Well I guess I gotta start working on learning HTML Form
 extractableTextBox.addEventListener('input', (event) => {
     toi = extractableTextBox.value.split('\n');
-    console.log(extractableTextBox.value);
+    console.log("\n\nbutterfly:\n\n" + extractableTextBox.value);
     console.log(toi);
     extractMainInfo(toi);
 
@@ -23,9 +23,7 @@ extractableTextBox.addEventListener('input', (event) => {
     // }
 });
 
-
 extractMainInfo(toi);
-
 
 function extractMainInfo(request) {
     let opcode = request[request.length - 3];
@@ -39,35 +37,22 @@ function extractMainInfo(request) {
     amount = amount.split(' ')[1];
 
     let name = brand.split('/^\d/')[0];
-    console.log(`Name =`, name);
+    // console.log(`Name =`, name);
 
-    for (let i = 4; i < request.length - 5; i++) {
-        let temp = new API_Set(opcode)
-    }
     let firstProd = request[4];
     let lastProd = request[request.length - 5];
 
-    console.log(`Brand =`, brand);
-    console.log(`Opcode =`, opcode);
-    console.log(`Currency =`, currency);
-    console.log(`Amount =`, amount);
-    console.log(`firstProd =`, firstProd);
-    console.log(`lastProd =`, lastProd);
+    // console.log(`Brand =`, brand);
+    // console.log(`Opcode =`, opcode);
+    // console.log(`Currency =`, currency);
+    // console.log(`Amount =`, amount);
+    // console.log(`firstProd =`, firstProd);
+    // console.log(`lastProd =`, lastProd);
 }
 
-console.log(v12v);
 
 
-
-
-
-
-
-
-
-
-
-
+console.log("From Product Data sheet: ", v12v);
 // temp
 /*
 Application: Top Up Product Credit 
