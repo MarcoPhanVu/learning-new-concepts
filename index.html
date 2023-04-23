@@ -15,33 +15,25 @@
 </head>
 <body>
     <div class="main-container">
-        <h1 class="subject">Text Processing</h1>
+        <!-- <h1 class="subject">Text Processing</h1> -->
         <div class="large-container text-processing">
             <div class="panel-single">
-                <form action=""></form>
-                <div class="input-section">
-                    <!-- <div class="input-ele">
+                <form action="./pages/result-page.html" method="get" class="hidden">
+                <!-- <form action="./pages/result-page.html" method="get" class=""> -->
+                    <div class="input-ele">
                         <label for="username">Username</label>
-                        <input type="text">
-                    </div>
-                    <div class="input-ele">
-                        <label for="password">Password</label>
-                        <input type="text">
-                    </div>
-                    <div class="input-ele">
-                        <label for="confirm-password">Confirm Password</label>
-                        <input type="text">
-                    </div>
-                    <div class="input-ele">
-                        <label for="email">Email</label>
-                        <input type="text">
+                        <input name="username" type="text" id="username" value="connectdoc" required>
                     </div>
                     <div class="input-ele">
                         <label for="promo-code">Promo Code</label>
-                        <input type="text">
-                    </div> -->
-                    <label for="">Input wanted text</label>
-                    <textarea name="" id="text-processing" cols="80" rows="15" placeholder="nothing here"></textarea>
+                        <input name="promo-code" type="text" placeholder="XXXX">
+                    </div>
+                    <button type="reset">Clear</button>                    
+                    <button type="submit">Press me!</button>                    
+                </form>
+                <div class="input-section">
+                    <!-- <label for="">Input wanted text</label> -->
+                    <textarea name="" id="text-processing" cols="80" rows="15" placeholder="nothing here" class="hiddennot"></textarea>
                 </div>
             </div>
         </div>

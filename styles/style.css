@@ -40,7 +40,8 @@ body {
 .main-container {    
     background-color: rgb(243, 246, 255);
     padding: 36px;
-    min-width: 760px;
+    min-width: 600px;
+    margin: auto;
 }
 
 .subject {
@@ -80,15 +81,6 @@ body {
     display: flex;
     row-gap: 24px;
     flex-direction: column;
-}
-
-.input-section {
-    width: 300px;
-}
-
-.input-ele {
-    display: flex;
-    justify-content: space-between;
 }
 
 .sub-container {

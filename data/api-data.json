@@ -1,17 +1,17 @@
 {
-    "browsers": {
-        "firefox": {
-            "name": "Firefox",
-            "pref_url": "about:config",
-            "releases": {
-                "1": {
-                    "release_date": "2004-11-09",
-                    "status": "retired",
-                    "engine": "Gecko",
-                    "engine_version": "1.7"
-                }
-            }
-        }
-    }
+    "toppedUp": {
+        "Bbin": "L82",
+        "BTI": "avivian127vnd",
+        "CMD": "VV1VNadmin",
+        "IBC": "D86",
+        "SBO": "GSG87",
+        "UG Sport(TBS)": "VIVIAN127VND",
+        "WBET": "VIVIAN127",
+        "Asia Gaming": "avivian127vnd",
+        "Big Gaming": "VIVIAN127VN"
+    },
+    "opcode": "v12v",
+    "name": "Vivian",
+    "brandname": "VIVIAN127",
+    "currency": "VND"
 }
-

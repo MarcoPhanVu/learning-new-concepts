@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Page</title>
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" type ="text/css" href="../styles/style.css">
+    <link rel="stylesheet" type ="text/css" href="../styles/form.css">
+
+</head>
+<body>
+
+    <a href="/">Back to main page</a>
+    <div id="result-box">
+        
+    </div>
+
+    <script>
+        const resultBox = document.getElementById("result-box");
+        
+        // console.log(window.location.search); //url
+
+        new URLSearchParams(window.location.search).forEach( (value, name) => {
+            resultBox.append(`${name}: ${value}`);
+            resultBox.append(document.createElement("br"));
+        })
+    </script>
+</body>
+</html>

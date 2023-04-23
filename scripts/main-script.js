@@ -14,3 +14,6 @@ function swap(a, b) {
     return;
 }
 
+function RandomFromMinToMax(min, max){
+    return Math.floor(Math.random()*(max-min)) + min;
+}

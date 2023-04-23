@@ -52,7 +52,6 @@ function extractMainInfo(request) {
 
 
 
-console.log("From Product Data sheet: ", v12v);
 // temp
 /*
 Application: Top Up Product Credit 

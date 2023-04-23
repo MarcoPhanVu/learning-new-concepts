@@ -38,6 +38,3 @@ const API_Manager = {
     USDT: [],
     Combined: []
 }
-
-document.write("a", JSON.stringify(v12v));
-console.log("a", JSON.stringify(v12v));

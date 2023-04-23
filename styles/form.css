@@ -1,0 +1,10 @@
+.input-section {
+    width: 200px;
+}
+
+.input-ele {
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+    /* background-color: crimson; */
+}
