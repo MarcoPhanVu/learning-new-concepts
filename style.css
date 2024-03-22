@@ -73,6 +73,24 @@ body {
     /* justify-content: center; */
 }
 
+.panel-single {
+    background-color: rgb(255, 235, 235);
+    flex: 1;
+    padding: 24px;
+    display: flex;
+    row-gap: 24px;
+    flex-direction: column;
+}
+
+.input-section {
+    width: 300px;
+}
+
+.input-ele {
+    display: flex;
+    justify-content: space-between;
+}
+
 .sub-container {
     background-color: rgb(21, 51, 80);
     padding: 24px;
@@ -97,8 +115,11 @@ body {
 }
 
 .sub-container > * {
-    margin: 12px 0;
-    /* background-color: slategrey; */
+    margin: 8px 0;
+}
+
+.sub-container > p {
+    line-height: 20px;
 }
 
 /* .sub-container:nth-child(2n) {
@@ -107,7 +128,19 @@ body {
     background-color: rgb(170, 141, 248);
 } */
 
+.the-Ha-Noi-tower-problem {
+    list-style-type: none;
+}
 
+.the-Ha-Noi-tower-title {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.the-Ha-Noi-tower-move {
+    
+    font-size: 12px;
+}
 
 
 
